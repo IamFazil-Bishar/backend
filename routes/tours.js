@@ -1,6 +1,7 @@
 import express from "express";
 import { createTour, deleteTour, getAllTour, getSingleTour, updateTour, getTourBySearch, getFeaturedTour, getTourCount } from "./../controllers/tourController.js";
-import { verifyAdmin } from "../utils/verifyToken.cjs";
+import verifyToken from "../utils/verifyToken.cjs";
+const { verifyAdmin } = verifyToken;
 
 
 const router = express.Router();
