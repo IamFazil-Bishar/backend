@@ -65,7 +65,7 @@ app.listen(port, () => {
 
 
 
-// // Manually set CORS headers
+// // // Manually set CORS headers
 // app.use((req, res, next) => {
 //   const allowedOrigins = ["https://frontend-iota-ochre-57.vercel.app"];
 //   const origin = req.headers.origin;
