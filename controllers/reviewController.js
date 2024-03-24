@@ -2,7 +2,7 @@ import Tour from "../models/Tour.js"
 import Review from "../models/Review.js"
 
 import jwt from 'jsonwebtoken';
-import { verifyToken } from '../utils/verifyToken.cjs'; // Assuming `verifyToken` middleware is defined in auth.js
+import { verifyToken } from '../utils/verifyToken.js'; // Assuming `verifyToken` middleware is defined in auth.js
 
 export const createReview = async (req, res) => {
     try {
