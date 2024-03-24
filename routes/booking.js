@@ -1,5 +1,5 @@
 import express from 'express'
-import { verifyAdmin, verifyUser } from '../utils/verifyToken.js'
+import { verifyAdmin, verifyUser } from '../utils/verifyToken.cjs'
 import { createBooking, getAllBooking, getBooking } from '../controllers/bookingController.js'
 
 const router = express.Router()
