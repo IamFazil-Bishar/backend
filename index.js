@@ -17,6 +17,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 
+app.use(cookieParser());
+
 const corsOptions = {
   origin: true,
   Credential: true
@@ -44,7 +46,7 @@ const connect = async () => {
 };
 
 // middleware
-app.use(cookieParser());
+
 app.use(express.json());
 app.use(cors(corsOptions));
 
