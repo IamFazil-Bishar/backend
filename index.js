@@ -32,6 +32,12 @@ app.use(cors({
   credentials: true // Allow credentials to be sent
 }));
 
+app.use((req, res, next) => {
+  const accessToken = req.cookies.access_token ? '\x1b[32mTrue\x1b[0m' : '\x1b[31mFalse\x1b[0m';
+  console.log(`\x1b[1m\x1b[37m[${new Date().toLocaleTimeString([], {hour12: false, hourCycle: 'h23'})}] \x1b[1m\x1b[33m[Server] [Debug]\x1b[0m - Path: ${req.path} - Method: ${req.method} - Body: ${JSON.stringify(req.body)} - Access Token: ${accessToken}`);
+  next(); // this has to be called
+});
+
 // database connection
 mongoose.set("strictQuery", false);
 const connect = async () => {
