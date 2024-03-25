@@ -20,10 +20,10 @@ const port = process.env.PORT || 8000;
 
 
 
-const corsOptions = {
-  origin: true,
-  Credential: true
-}
+// const corsOptions = {
+//   origin: true,
+//   Credential: true
+// }
 
  // Enable CORS middleware
 
@@ -49,7 +49,7 @@ const connect = async () => {
 // middleware
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/tours", tourRoute);
