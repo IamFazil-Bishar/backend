@@ -6,7 +6,7 @@ export const verifyToken = (req, res, next) => {
 
     // Check if token exists
     if (!token) {
-        return res.status(401).json({ success: false, message: "You are not authorized" });
+        return res.status(401).json({ success: false, message: "You are not authorized , not found token" });
     }
 
     // Verify the token
