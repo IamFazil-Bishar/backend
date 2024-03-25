@@ -15,7 +15,7 @@ import bookingRoute from './routes/booking.js'
 
 dotenv.config();
 const app = express();
-app.use(cookieParser());
+
 const port = process.env.PORT || 8000;
 
 
@@ -47,7 +47,7 @@ const connect = async () => {
 };
 
 // middleware
-
+app.use(cookieParser());
 app.use(express.json());
 app.use(cors(corsOptions));
 
